@@ -8,7 +8,7 @@ describe('currying function test', () => {
 
     expect(result).toBe(6);
   });
-  
+
   it('should return a value for a set of values received', () => {
     //mock function to be curried
     const mockSum = jest.fn((a, b, x, y, z) => (a + b + x + y + z))
@@ -22,7 +22,7 @@ describe('currying function test', () => {
     //check result
     expect(result).toBe(15);
     //check values passed to mock function
-    expect(mockSum).toBeCalledWith(1,2,3,4,5)
+    expect(mockSum).toBeCalledWith(1, 2, 3, 4, 5)
     // check if passed values will be pushed in same order
     expect(mockSum.mock.calls[0][0]).toBe(1);
     expect(mockSum.mock.calls[0][1]).toBe(2);
